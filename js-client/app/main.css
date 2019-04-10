@@ -1,0 +1,52 @@
+.worksheet > rect {
+  pointer-events: none;
+  fill: #f8f8f8;
+}
+
+.node {
+  fill: #ddd;
+  stroke: #999;
+}
+
+.node tspan {
+  pointer-events: none;
+}
+
+.template-node {
+  fill: #dfd;
+  stroke: #999;
+}
+
+text {
+  fill: black;
+  stroke: none;
+  font-family: Helvetica, Arial, Sans-serif;
+}
+
+.node.selected > rect {
+  stroke-width: 3px;
+  stroke: black;
+}
+
+.node.highlighted-target > rect {
+  fill: #afa;
+}
+
+.node.moving {
+  fill-opacity: 0.5;
+}
+
+.delete-button circle {
+  fill: red;
+  stroke: none;
+}
+
+.delete-button path {
+  pointer-events: none;
+  stroke: white;
+  stroke-width: 3px;
+}
+
+.relation.selected {
+  stroke-width: 2px;
+}
