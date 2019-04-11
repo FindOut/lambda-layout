@@ -37,5 +37,9 @@ Steg för steg:
 
 Titta på koden i web-app-filen app/js/localLayout.js - Ändra inte denna fil, men inspireras av koden för att:
 
-1. skriva om app/js/lambdaLayout.js så att den anropar en AWS Lambda med vår graf, och tar emot och renderar en layoutad version av denna 
+1. skriva om app/js/lambdaLayout.js så att den anropar en AWS Lambda med vår graf, och tar emot och renderar en layoutad version av denna
 1. skapa en AWS Lambda som tar emot REST-anropet ovan, gör layout och returnerar resultatet
+
+## Om viz.js
+
+Detta är en maskinöversättning av C++-biblioteket Graphviz till Javascript. Indata är i DOT-format. Se info om detta och länkar till mer infor på http://viz-js.com/ där man kan testa viz.js interaktivt och hitta länkar till Graphviz-dokumentationen.
