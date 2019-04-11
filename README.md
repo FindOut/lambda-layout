@@ -44,7 +44,7 @@ Det är viktigt att zip-filen har node_modules och layout.js på toppnivån.
 
 Mappen js-lambda innehåller skelett till kod för att laddas upp till AWS-Lambda. Den laddar också ned node-modulen vis.js.
 
-Kör
+Innan ni börjar koda lambda-funktionen, kör
 
     cd js-lambda
     npm install
