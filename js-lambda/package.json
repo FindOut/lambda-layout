@@ -1,0 +1,15 @@
+{
+  "name": "js-lambda",
+  "version": "1.0.0",
+  "description": "layout service as an AWS Lambda function",
+  "main": "layout.js",
+  "scripts": {
+    "pack": "zip -r ../lambda-layout.zip node_modules layout.js"
+  },
+  "author": "dag.rende@find-out.se",
+  "license": "ISC",
+  "dependencies": {
+    "viz.js": "^2.1.2"
+  },
+  "devDependencies": {}
+}

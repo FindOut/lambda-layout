@@ -1,9 +1,9 @@
+// vi använder require här för att det skall funka även i node
 const Viz = require('viz.js');
-const { Module, render } = require('viz.js/lite.render.js');
-
+const {Module, render} = require('viz.js/lite.render.js');
 
 export default function localLayout(graph) {
-  let viz = new Viz({ Module, render });
+  let viz = new Viz({Module, render});
 
   return viz.renderJSONObject(graphToDotFormat(graph))
       .then(function (result) {

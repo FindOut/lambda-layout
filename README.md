@@ -21,19 +21,41 @@ Repot https://github.com/FindOut/lambda-layout inehåller fungerande kod att utg
 
 Steg för steg:
 
-1. klona https://github.com/FindOut/lambda-layout
-1. cd lambda-layout
+    git clone git@github.com:FindOut/lambda-layout.git
+    cd lambda-layout
 
 ### Javascript-klient
 
-1. cd js-client
-1. npm install
-1. npm start
-1. ett browser-fönster öppnas och visar efter ett tag en liten graf
-1. prova knappen *Local Layout* - grafen layouts i browsern
-1. prova knappen *Lambda Layout* - ett REST request simulerar anrop av en Lambda-funktion, men returnerar nu bara en graf-fil ifrån utvecklingsservern på din dator
+    cd js-client
+    npm install
+    npm start
 
-### AWS-Lambda-tjänst
+* ett browser-fönster öppnas och visar efter ett tag en liten graf
+* prova knappen *Local Layout* - grafen layouts i browsern
+* prova knappen *Lambda Layout* - ett REST request simulerar anrop av en Lambda-funktion, men returnerar nu bara en graf-fil ifrån utvecklingsservern på din dator
+
+### Lambda-funktion i javascript med beroenden
+
+Javascript-kod körs i AWS-Lambda med node.js. Enkel kod som inte använder node-moduler kan skrivas direkt i AWS-Lambda-websidan.
+
+Om man vill använda node-moduler, så installerar man dem på sin egen dator med npm install *modul*. Sen zippar man sin mapp och laddar upp den med en knapp på AWS-Lambda-websidan.
+Där kan man sedan testa och även redigera sin kod tills den funkar.
+Det är viktigt att zip-filen har node_modules och layout.js på toppnivån.
+
+Mappen js-lambda innehåller skelett till kod för att laddas upp till AWS-Lambda. Den laddar också ned node-modulen vis.js.
+
+Kör
+
+    cd js-lambda
+    npm install
+
+Ni som har kommandot zip installerat kan zippa för uppladdning med kommandot
+
+    npm run pack
+
+Mer info om javascript i AWS Lambda: https://docs.aws.amazon.com/lambda/latest/dg/nodejs-create-deployment-pkg.html.
+
+### Layout som AWS-Lambda-tjänst
 
 Titta på koden i web-app-filen app/js/localLayout.js - Ändra inte denna fil, men inspireras av koden för att:
 
