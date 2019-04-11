@@ -23,7 +23,11 @@ var graph = {
   ]
 }
 
-document.getElementById('localLayout').onclick = () => localLayout(graph).then(layoutedGraph => render(layoutedGraph));
-document.getElementById('lambdaLayout').onclick = () => lambdaLayout(graph).then(layoutedGraph => render(layoutedGraph));
+document.getElementById('localLayout').onclick = function () {
+  localLayout(graph).then(function (layoutedGraph) {render(layoutedGraph)})
+};
+document.getElementById('lambdaLayout').onclick = function() {
+  lambdaLayout(graph).then(function (layoutedGraph) {render(layoutedGraph)})
+};
 
 render(graph);

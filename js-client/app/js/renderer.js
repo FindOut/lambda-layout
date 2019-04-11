@@ -4,6 +4,7 @@ var boxComponent = new fomod.SimpleTextBoxComponent('anode');
 var relationComponent = new fomod.RelationComponent('relation');
 
 export default function render(graph) {
+  console.log('render', graph);
   // run the renderers to create svg elements, and
   // do layout in the right order (first inner then outer)
   var worksheet = worksheetComponent(fomod.d3.select('body'), [{id: 'ws'}]);
